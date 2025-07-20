@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Jane Doe Photography</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation (same as home page) */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #666;
+        }
+
+        /* About Section */
+        .about-container {
+            max-width: 1000px;
+            margin: 120px auto 0;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            min-height: calc(100vh - 200px);
+        }
+
+        .about-image {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.5s ease;
+        }
+
+        .about-image:hover {
+            filter: grayscale(0%);
+        }
+
+        .about-content h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .services {
+            margin-top: 3rem;
+        }
+
+        .services h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .services ul {
+            list-style: none;
+            color: #555;
+        }
+
+        .services li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-info {
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: #fff;
+            border-left: 3px solid #333;
+        }
+
+        .contact-info h3 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            background-color: #fff;
+            margin-top: 4rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image {
+                height: 400px;
+            }
+
+            .about-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Jane Doe</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Gallery</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about-container">
+        <div>
+            <img src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?w=600" alt="Jane Doe" class="about-image">
+        </div>
+        <div class="about-content">
+            <h1>ABOUT ME</h1>
+            <p>
+                I'm Jane Doe, a documentary and portrait photographer based in London. 
+                My journey with photography began ten years ago when I picked up my 
+                grandfather's old film camera. What started as curiosity quickly became 
+                my passion and purpose.
+            </p>
+            <p>
+                I believe in capturing authentic moments and real emotions. My approach 
+                is unobtrusive and natural, allowing people to be themselves in front 
+                of the lens. Whether it's a wedding, a family gathering, or a personal 
+                portrait session, I strive to tell your unique story through my images.
+            </p>
+            <p>
+                When I'm not behind the camera, you'll find me exploring new cities, 
+                reading in cozy cafés, or hiking with my rescue dog, Luna.
+            </p>
+
+            <div class="services">
+                <h2>SERVICES</h2>
+                <ul>
+                    <li>Wedding Photography</li>
+                    <li>Portrait Sessions</li>
+                    <li>Family Photography</li>
+                    <li>Event Documentation</li>
+                    <li>Editorial Work</li>
+                </ul>
+            </div>
+
+            <div class="contact-info">
+                <h3>GET IN TOUCH</h3>
+                <p>
+                    <a href="mailto:hello@janedoephotography.com">hello@janedoephotography.com</a><br>
+                    <a href="tel:+447123456789">+44 7123 456789</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Email</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <p>&copy; 2024 Jane Doe Photography. All rights reserved.</p>
+    </footer>
+</body>
+</html>
